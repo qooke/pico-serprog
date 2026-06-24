@@ -19,14 +19,22 @@ Pinout for the SPI lines:
 ## Compiling
 
 ```
-cmake .
-make
+./build.sh
+```
+
+For a Raspberry Pi Pico W:
+
+```
+./build.sh -DPICO_BOARD=pico_w
 ```
 
 Plug in your Pico. Mount it as you would any other USB flash drive.
 Copy `pico_serprog.uf2` into it. Your programmer is now ready.
-If you want to change the firwmare, you need to press the button
+If you want to change the firmware, you need to press the button
 on the board while you plug it in.
+
+The onboard LED is on when the firmware is idle. It blinks while serprog data is
+moving; faster transfers blink faster, and slower transfers blink slower.
 
 ## Usage
 
@@ -60,4 +68,3 @@ pinout.png is based on
 by Raspberry Pi Ltd, under the
 [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)
 license.
-

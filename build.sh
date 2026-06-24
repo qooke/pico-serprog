@@ -10,8 +10,8 @@ main() {
 		git submodule update --init --recursive
 	fi
 
-	cmake -B $BUILD_DIR -S $BASE_DIR
-	make -C $BUILD_DIR
+	cmake -B "$BUILD_DIR" -S "$BASE_DIR" "$@"
+	make -C "$BUILD_DIR"
 }
 
-main $@
+main "$@"
